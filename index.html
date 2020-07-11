@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='css/style.css'>
+  <title>Rock Paper Scissors</title>
+</head>
+<body class='page'>
+    <header class='header page__header'>
+      <h1 class='header__title'>ROCK PAPER SCISSORS</h1>
+    </header>
+    <div class='game page__game'>
+      <h2 class='game__title'></h2>
+      <img class='game__img' data-option="paper" src="images/papier.jpg" alt="paper" title="Paper">
+      <img class='game__img' data-option="rock" src="images/kamien.jpg" alt="rock" title="Rock">
+      <img class='game__img' data-option="scissors" src="images/nozyczki.jpg" alt="scissors" title="Scissors">
+      <br />
+      <button class='game__btn game__btn-start'>START NEW GAME</button>
+    </div>
+    <div class='score page__score'>
+      <h3 class='score__title'></h3>
+      <table class='score__table'>
+        <thead>
+          <tr>
+            <th class='score__cell'>ROUNDS</th>
+            <th class='score__cell'>YOU</th>
+            <th class='score__cell'>COMPUTER</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class='score__cell' data-summary='round-number'></td>
+            <td class='score__cell' data-summary='your-choice'></td>
+            <td class='score__cell' data-summary='computer-choice'></td>
+          </tr>
+          <tr>
+            <td class='score__cell' colspan="3">
+              <span data-summary= 'your-score-total'>0</span>
+              <span> : </span>
+              <span data-summary= 'computer-score-total'>0</span>
+              <span data-summary= 'score-message-total'></span>
+            </td>
+          </tr>
+          <tr>
+            <td class='score__cell' data-summary='score-message' colspan="3"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--Modal-->
+    <div class='overlay'>
+      <div class='modal overlay__modal'>
+        <div class='modal__btn-close'>X</div>
+        <label class='modal_label '>Your name:</label>
+        <input class='modal__input modal__input-name' type='text' placeholder='Name'/>
+        <br />
+        <label class='modal__label'>Rounds to win: </label>
+        <input class='modal__input modal__input-rounds' type='number' min='1' max='10' placeholder='Max 10 rounds' required />
+        <br />
+        <button class='modal__btn'>OK</button>
+      </div>
+    </div>
+  <script src='js/script.js'></script>
+</body>
+</html>
