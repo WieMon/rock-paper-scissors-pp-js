@@ -1,0 +1,68 @@
+/*Check it*/
+@import url("https://fonts.googleapis.com/css?family=Damion|Open+Sans&display=swap&subset=latin-ext");
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*Variable*/
+/*Check fonts*/
+$color-one: #718093;
+$color-two: #FFFFFF;
+$font-font: "Open Sans", Helvetica, Arial;
+$font-two: "Open Sans", Helvetica, Arial;
+$font-three: 'Damion', cursive;
+
+/*Modal*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: $color-one;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.modal {
+  max-width: 600px;
+  margin: auto;
+  background-color: $color-two;
+  position: relative;
+  padding: 30px;
+  display: none;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal__btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+.score__table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.score__cell {
+  width: 150px;
+  height: 30px;
+  border: 1.5px solid #273c75;
+  text-align: center;
+}
