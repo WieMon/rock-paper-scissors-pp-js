@@ -51,6 +51,15 @@ function addContentModal() {
   }
 }
 
+//Function to initiate the game
+function initGame() {
+  closeModal();
+  addContentModal();
+  scoreMessageSpan.textContent = '';
+  playerScoreTotalSpan.textContent = 0;
+  computerScoreTotalSpan.textContent = 0;
+  roundNumberSpan.textContent = '';
+}
 
 //Event Listeners
 startBtn.addEventListener('click', function (e) {
@@ -61,4 +70,4 @@ modalCloseBtn.addEventListener('click', function (e) {
   e.preventDefault();
   closeModal();
 });
-//modalBtn.addEventListener('click', initGame);
+modalBtn.addEventListener('click', initGame);
