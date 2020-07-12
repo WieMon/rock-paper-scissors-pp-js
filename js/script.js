@@ -61,6 +61,24 @@ function initGame() {
   roundNumberSpan.textContent = '';
 }
 
+//Function for the player choice
+function playerHandSelection() {
+  if (gameSummary.roundNumber === '') {
+    alert('Please provide your name and number of rounds to play.');
+    return openModal();
+  }
+  game.playerChoice = this.dataset.option;
+  hands.forEach(hand => hand.style.boxShadow = '');
+  this.style.boxShadow = '0 0 0 4px red';
+  playGame();
+}
+
+//Function for the computer choice
+function computerHandSelection() {
+  console.log('computerHandSelection');
+  return hands[Math.floor(Math.random() * 3)].dataset.option;
+}
+
 //Event Listeners
 startBtn.addEventListener('click', function (e) {
   e.preventDefault();
@@ -71,3 +89,4 @@ modalCloseBtn.addEventListener('click', function (e) {
   closeModal();
 });
 modalBtn.addEventListener('click', initGame);
+hands.forEach(hand => hand.addEventListener('click', playerHandSelection));
