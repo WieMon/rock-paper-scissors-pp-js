@@ -75,8 +75,36 @@ function playerHandSelection() {
 
 //Function for the computer choice
 function computerHandSelection() {
-  console.log('computerHandSelection');
   return hands[Math.floor(Math.random() * 3)].dataset.option;
+}
+
+//Function for the game results
+function checkResult(player, computer) {
+  if (player === computer) {
+    return 'draw';
+  } else if ((player === "paper" && computer === "rock") ||
+    (player === "rock" && computer === "scissors") ||
+    (player === "scissors" && computer === "paper")) {
+    return 'win';
+  } else {
+    return 'loss';
+  }
+}
+
+//Function for showing the game results
+function publishResult(player, computer, result) {
+  roundNumberSpan.textContent = ++gameSummary.rounds;
+  playerChoiceSpan.textContent = player;
+  computerChoiceSpan.textContent = computer;
+  if (result === 'win') {
+    playerScoreTotalSpan.textContent = ++gameSummary.playerPoints;
+  } else if (result === 'loss') {
+    computerScoreTotalSpan.textContent = ++gameSummary.computerPoints;
+  }
+}
+
+//Main function
+function playGame() {
 }
 
 //Event Listeners
