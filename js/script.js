@@ -27,3 +27,38 @@ const gameSummary = {
   playerName: '',
 }
 
+//Function for opening the modal
+function openModal() {
+  document.querySelector('.overlay').classList.add('show');
+  document.querySelector('.modal').classList.add('show');
+  playerNameInput.value = '';
+  roundNumberInput.value = '';
+}
+
+//Function for closing the modal
+function closeModal() {
+  document.querySelector('.overlay').classList.remove('show');
+}
+
+//Function for adding the content of modal
+function addContentModal() {
+  gameSummary.playerName = playerNameInput.value.toUpperCase();
+  gameSummary.roundNumber = roundNumberInput.value;
+  gameStartTitle.innerHTML = `${gameSummary.playerName} you will play ${gameSummary.roundNumber} rounds. Please choose your move.`;
+  if (gameSummary.playerName === '' || gameSummary.roundNumber === '') {
+    alert('Please fill the form.');
+    return openModal();
+  }
+}
+
+
+//Event Listeners
+startBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  openModal();
+});
+modalCloseBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  closeModal();
+});
+//modalBtn.addEventListener('click', initGame);
