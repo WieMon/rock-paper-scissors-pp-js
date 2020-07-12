@@ -103,8 +103,25 @@ function publishResult(player, computer, result) {
   }
 }
 
+//Function for ending the game
+function endGame() {
+  game.playerChoice = '';
+  game.computerChoice = '';
+}
+
 //Main function
 function playGame() {
+  if (gameSummary.rounds < gameSummary.roundNumber) {
+    game.computerChoice = computerHandSelection();
+    const gameResult = checkResult(game.playerChoice, game.computerChoice);
+    publishResult(game.playerChoice, game.computerChoice, gameResult);
+    endGame();
+  }
+  if (gameSummary.rounds == gameSummary.roundNumber) {
+    window.setTimeout(() => {
+      publishTotalMessage();
+    }, 1000);
+  }
 }
 
 //Event Listeners
