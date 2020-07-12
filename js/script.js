@@ -103,10 +103,55 @@ function publishResult(player, computer, result) {
   }
 }
 
+//Function to publish the final message
+function publishTotalMessage() {
+  const winMessage = 'Congratulations!!! You won the game!!! Play again.';
+  const lostMessage = 'I am so sorry but you lost :( Try your luck again.';
+  const drawMessage = 'Draw... Try again ...';
+
+  let index = 0;
+  if (gameSummary.playerPoints > gameSummary.computerPoints) {
+    clearResults();
+    const addLetter = () => {
+      scoreMessageSpan.textContent += winMessage[index];
+      index++;
+      if (index === winMessage.length) clearInterval(indexTyping);
+    }
+    const indexTyping = setInterval(addLetter, 40);
+  } else if (gameSummary.playerPoints < gameSummary.computerPoints) {
+    clearResults();
+    const addLetter = () => {
+      scoreMessageSpan.textContent += lostMessage[index];
+      index++;
+      if (index === lostMessage.length) clearInterval(indexTyping);
+    }
+    const indexTyping = setInterval(addLetter, 40);
+  } else {
+    clearResults();
+    const addLetter = () => {
+      scoreMessageSpan.textContent += drawMessage[index];
+      index++;
+      if (index === drawMessage.length) clearInterval(indexTyping);
+    }
+    const indexTyping = setInterval(addLetter, 40);
+  }
+}
+
 //Function for ending the game
 function endGame() {
   game.playerChoice = '';
   game.computerChoice = '';
+}
+
+function clearResults() {
+  gameSummary.rounds = 0;
+  gameSummary.playerPoints = 0;
+  gameSummary.computerPoints = 0;
+  playerChoiceSpan.textContent = '';
+  computerChoiceSpan.textContent = '';
+  hands.forEach(hand => hand.style.boxShadow = '');
+  roundNumberSpan.textContent = '';
+  gameSummary.roundNumber = ''
 }
 
 //Main function
