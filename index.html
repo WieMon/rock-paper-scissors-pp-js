@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
   <link rel='stylesheet' href='css/style.css'>
   <title>Rock Paper Scissors</title>
 </head>
@@ -12,9 +13,16 @@
     </header>
     <div class='game page__game'>
       <h2 class='game__title'></h2>
-      <img class='game__img' data-option="paper" src="images/papier.jpg" alt="paper" title="Paper">
-      <img class='game__img' data-option="rock" src="images/kamien.jpg" alt="rock" title="Rock">
-      <img class='game__img' data-option="scissors" src="images/nozyczki.jpg" alt="scissors" title="Scissors">
+      <button class='game__img' data-option="paper">
+        <i class="fas fa-hand-paper"></i>
+      </button>
+      <button class='game__img' data-option="rock">
+        <i class="fas fa-hand-rock"></i>
+      </button>
+      <button class='game__img' data-option="scissors">
+        <i class="fas fa-hand-scissors"></i>
+      </button>
+      
       <br />
       <button class='game__btn game__btn-start'>START NEW GAME</button>
     </div>

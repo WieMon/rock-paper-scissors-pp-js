@@ -108,7 +108,6 @@ function publishTotalMessage() {
   const winMessage = 'Congratulations!!! You won the game!!! Play again.';
   const lostMessage = 'I am so sorry but you lost :( Try your luck again.';
   const drawMessage = 'Draw... Try again ...';
-
   let index = 0;
   if (gameSummary.playerPoints > gameSummary.computerPoints) {
     clearResults();
@@ -117,6 +116,7 @@ function publishTotalMessage() {
       index++;
       if (index === winMessage.length) clearInterval(indexTyping);
     }
+    addLetter();
     const indexTyping = setInterval(addLetter, 40);
   } else if (gameSummary.playerPoints < gameSummary.computerPoints) {
     clearResults();
@@ -125,6 +125,7 @@ function publishTotalMessage() {
       index++;
       if (index === lostMessage.length) clearInterval(indexTyping);
     }
+    addLetter();
     const indexTyping = setInterval(addLetter, 40);
   } else {
     clearResults();
@@ -133,6 +134,7 @@ function publishTotalMessage() {
       index++;
       if (index === drawMessage.length) clearInterval(indexTyping);
     }
+    addLetter();
     const indexTyping = setInterval(addLetter, 40);
   }
 }
