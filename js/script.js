@@ -68,8 +68,9 @@ function playerHandSelection() {
     return openModal();
   }
   game.playerChoice = this.dataset.option;
-  hands.forEach(hand => hand.style.boxShadow = '');
-  this.style.boxShadow = '0 0 0 4px red';
+  // hands.forEach(hand => hand.style.boxShadow = '');
+  // this.style.boxShadow = '0 0 0 4px red';
+  //hands.forEach(hand => hand.classList.add('active'));
   playGame();
 }
 
@@ -151,7 +152,8 @@ function clearResults() {
   gameSummary.computerPoints = 0;
   playerChoiceSpan.textContent = '';
   computerChoiceSpan.textContent = '';
-  hands.forEach(hand => hand.style.boxShadow = '');
+  //hands.forEach(hand => hand.style.boxShadow = '');
+  //hands.forEach(hand => hand.classList.remove('active'));
   roundNumberSpan.textContent = '';
   gameSummary.roundNumber = ''
 }

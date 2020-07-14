@@ -8,13 +8,111 @@
 }
 
 /*Variable*/
-/*Check fonts*/
-$color-one: #718093;
-$color-two: #FFFFFF;
-$font-font: "Open Sans", Helvetica, Arial;
-$font-two: "Open Sans", Helvetica, Arial;
-$font-three: 'Damion', cursive;
+$color-one: #40739e;
+$color-two: #FFC312;
+$color-three: #032b4d;
+$color-four: #eb2f06;
+$color-five: #44bd32;
+$color-six: #1998f7;
+$color-seven:#FFFFFF;
+$color-eight: #718093;
+$font-one: 'Open Sans', sans-serif;
+$font-two: 'Bangers', cursive;
 
+//General
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  font-family: $font-one;
+  background-color: $color-one
+}
+
+.header {
+  margin: 40px 20px 20px 20px;
+  .header__title {
+    text-align: center;
+    font-family: $font-two;
+    font-size: 3em;
+    color: $color-two;
+    text-shadow: 6px 6px 1px $color-three;
+  }
+}
+
+.game {
+  margin: 20px;
+  text-align: center;
+}
+
+.score {
+  margin: 40px;
+}
+
+.game__img {
+  width: 145px;
+  height: 145px;
+  border-radius: 20%;
+  margin: 20px;
+  border: none;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+  }
+  .fas {
+    font-size: 85px;
+  }
+}
+
+.game__rock {
+  box-shadow: 6px 6px 1px $color-four;
+  &:active {
+    background-color: $color-four;
+    box-shadow: 6px 6px 1px $color-seven;
+    .fa-hand-rock {
+      color: $color-seven;
+    }
+  }
+  .fa-hand-rock {
+  color: $color-four;
+  }
+}
+
+.game__paper {
+  box-shadow: 6px 6px 1px $color-five;
+  &:active {
+    background-color: $color-five;
+    box-shadow: 6px 6px 1px $color-seven;
+    .fa-hand-paper {
+      color: $color-seven;
+    }
+  }
+  .fa-hand-paper {
+  color: $color-five;
+  }
+}
+
+.game__scissors {
+  box-shadow: 6px 6px 1px $color-six;
+  &:active {
+    background-color: $color-six;
+    box-shadow: 6px 6px 1px $color-seven;
+    .fa-hand-scissors {
+      color: $color-seven;
+    }
+  }
+  .fa-hand-scissors {
+    color: $color-six;
+  }
+}
+
+// .game__btn {
+//   width: 150px;
+//   height: 50px;
+//   border-radius: 10%;
+//   border: none;
+
+// }
 /*Modal*/
 .overlay {
   position: fixed;
@@ -23,7 +121,7 @@ $font-three: 'Damion', cursive;
   z-index: 9999;
   width: 100%;
   height: 100%;
-  background-color: $color-one;
+  background-color: $color-eight;
   justify-content: center;
   align-items: center;
   overflow: auto;
@@ -38,7 +136,7 @@ $font-three: 'Damion', cursive;
 .modal {
   max-width: 600px;
   margin: auto;
-  background-color: $color-two;
+  background-color: $color-seven;
   position: relative;
   padding: 30px;
   display: none;
@@ -55,6 +153,7 @@ $font-three: 'Damion', cursive;
   padding: 5px 10px;
 }
 
+//
 .score__table {
   margin: 0 auto;
   border-collapse: collapse;
@@ -66,3 +165,6 @@ $font-three: 'Damion', cursive;
   border: 1.5px solid #273c75;
   text-align: center;
 }
+
+
+
