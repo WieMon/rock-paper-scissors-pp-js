@@ -14,6 +14,7 @@
     </header>
     <div class='game page__game'>
       <button class='game__btn game__btn-start'>START NEW GAME</button>
+      <h3 class='game__title'></h3>
       <br />
       <button class='game__img game__rock' data-option="rock">
         <i class='fas fa-hand-rock'></i>
@@ -26,31 +27,26 @@
       </button>
     </div>
     <div class='score page__score'>
-      <h3 class='score__title'></h3>
+
       <table class='score__table'>
         <thead>
           <tr>
-            <th class='score__cell'>ROUNDS</th>
-            <th class='score__cell'>YOU</th>
-            <th class='score__cell'>COMPUTER</th>
+            <th class='score__cell'>You: </th>
+            <th class='score__cell' data-summary='your-choice'></th>
+            <th class='score__cell'>Computer: </th>
+            <th class='score__cell' data-summary='computer-choice'></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class='score__cell' data-summary='round-number'></td>
-            <td class='score__cell' data-summary='your-choice'></td>
-            <td class='score__cell' data-summary='computer-choice'></td>
-          </tr>
-          <tr>
-            <td class='score__cell' colspan="3">
+            <td class='score__cell' colspan="4">
               <span data-summary= 'your-score-total'>0</span>
               <span> : </span>
               <span data-summary= 'computer-score-total'>0</span>
-              <span data-summary= 'score-message-total'></span>
             </td>
           </tr>
           <tr>
-            <td class='score__cell' data-summary='score-message' colspan="3"></td>
+            <td class='score__cell' data-summary='score-message' colspan="4"></td>
           </tr>
         </tbody>
       </table>

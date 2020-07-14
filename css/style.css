@@ -21,29 +21,29 @@
 }
 
 .header {
-  margin: 40px 20px 20px 20px;
+  margin: 30px 20px 15px 20px;
 }
 
 .header .header__title {
   text-align: center;
   font-family: "Bangers", cursive;
-  font-size: 3.5em;
+  font-size: 3.2em;
   color: #FFC312;
   text-shadow: 6px 6px 1px #032b4d;
 }
 
 .game {
-  margin: 20px;
+  margin: 15px;
   text-align: center;
 }
 
 .score {
-  margin: 40px;
+  margin: 15px;
 }
 
 .game__img {
-  width: 145px;
-  height: 145px;
+  width: 135px;
+  height: 135px;
   border-radius: 20%;
   margin: 25px 20px 20px 20px;
   border: none;
@@ -112,8 +112,8 @@
 }
 
 .game__btn {
-  width: 220px;
-  height: 75px;
+  width: 180px;
+  height: 55px;
   margin: 15px 20px 40px 20px;
   border-radius: 15%;
   background-color: #032b4d;
@@ -121,7 +121,7 @@
   box-shadow: 5px 5px 1px #FFC312;
   border: none;
   outline: none;
-  font-size: 20px;
+  font-size: 1em;
 }
 
 .game__btn:hover, .game__btn:active {
@@ -129,6 +129,30 @@
   background-color: #05467e;
   color: #eb2f06;
   box-shadow: 5px 5px 1px #eb2f06;
+}
+
+.game__title {
+  font-size: 1.5em;
+  color: #FFC312;
+  text-shadow: 2px 2px 1px #032b4d;
+  margin: 0;
+}
+
+.score__table {
+  margin: 0 auto;
+  font-size: 20px;
+  background-color: #032b4d;
+  color: #FFFFFF;
+  border-collapse: collapse;
+  border-radius: 5%;
+  overflow: hidden;
+}
+
+.score__table .score__cell {
+  border: 1.5px solid #273c75;
+  text-align: center;
+  width: 150px;
+  height: 30px;
 }
 
 /*Modal*/
@@ -172,17 +196,5 @@
   top: 0;
   right: 0;
   padding: 5px 10px;
-}
-
-.score__table {
-  margin: 0 auto;
-  border-collapse: collapse;
-}
-
-.score__cell {
-  width: 150px;
-  height: 30px;
-  border: 1.5px solid #273c75;
-  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

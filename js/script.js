@@ -4,10 +4,9 @@ const hands = [...document.querySelectorAll('.game__img')];
 const startBtn = document.querySelector('.game__btn-start');
 const modalBtn = document.querySelector('.modal__btn');
 const modalCloseBtn = document.querySelector('.modal__btn-close');
-const gameStartTitle = document.querySelector('.score__title');
+const gameStartTitle = document.querySelector('.game__title');
 const playerNameInput = document.querySelector('.modal__input-name');
 const roundNumberInput = document.querySelector('.modal__input-rounds');
-const roundNumberSpan = document.querySelector('[data-summary="round-number"]');
 const playerChoiceSpan = document.querySelector('[data-summary="your-choice"]');
 const computerChoiceSpan = document.querySelector('[data-summary="computer-choice"]');
 const playerScoreTotalSpan = document.querySelector('[data-summary="your-score-total"]');
@@ -40,11 +39,16 @@ function closeModal() {
   document.querySelector('.overlay').classList.remove('show');
 }
 
+//Function to print the start message
+function startMessage() {
+  gameStartTitle.innerHTML = `${gameSummary.playerName} you will play ${gameSummary.roundNumber - gameSummary.rounds} rounds.<br /> Please choose your move:`
+}
+
 //Function for adding the content of modal
 function addContentModal() {
   gameSummary.playerName = playerNameInput.value.toUpperCase();
   gameSummary.roundNumber = roundNumberInput.value;
-  gameStartTitle.innerHTML = `${gameSummary.playerName} you will play ${gameSummary.roundNumber} rounds. Please choose your move.`;
+  startMessage();
   if (gameSummary.playerName === '' || gameSummary.roundNumber === '') {
     alert('Please fill the form.');
     return openModal();
@@ -58,7 +62,6 @@ function initGame() {
   scoreMessageSpan.textContent = '';
   playerScoreTotalSpan.textContent = 0;
   computerScoreTotalSpan.textContent = 0;
-  roundNumberSpan.textContent = '';
 }
 
 //Function for the player choice
@@ -68,9 +71,6 @@ function playerHandSelection() {
     return openModal();
   }
   game.playerChoice = this.dataset.option;
-  // hands.forEach(hand => hand.style.boxShadow = '');
-  // this.style.boxShadow = '0 0 0 4px red';
-  //hands.forEach(hand => hand.classList.add('active'));
   playGame();
 }
 
@@ -94,20 +94,24 @@ function checkResult(player, computer) {
 
 //Function for showing the game results
 function publishResult(player, computer, result) {
-  roundNumberSpan.textContent = ++gameSummary.rounds;
+  ++gameSummary.rounds;
   playerChoiceSpan.textContent = player;
   computerChoiceSpan.textContent = computer;
+  gameSummary.roundNumber - gameSummary.rounds
   if (result === 'win') {
     playerScoreTotalSpan.textContent = ++gameSummary.playerPoints;
-  } else if (result === 'loss') {
+    } else if (result === 'loss') {
     computerScoreTotalSpan.textContent = ++gameSummary.computerPoints;
+   } else {
   }
+  gameStartTitle.innerHTML;
+  startMessage();
 }
 
 //Function to publish the final message
 function publishTotalMessage() {
-  const winMessage = 'Congratulations!!! You won the game!!! Play again.';
-  const lostMessage = 'I am so sorry but you lost :( Try your luck again.';
+  const winMessage = 'Congratulations!!! You won the game!!!';
+  const lostMessage = 'I am sorry but you lost the game.';
   const drawMessage = 'Draw... Try again ...';
   let index = 0;
   if (gameSummary.playerPoints > gameSummary.computerPoints) {
@@ -152,9 +156,6 @@ function clearResults() {
   gameSummary.computerPoints = 0;
   playerChoiceSpan.textContent = '';
   computerChoiceSpan.textContent = '';
-  //hands.forEach(hand => hand.style.boxShadow = '');
-  //hands.forEach(hand => hand.classList.remove('active'));
-  roundNumberSpan.textContent = '';
   gameSummary.roundNumber = ''
 }
 

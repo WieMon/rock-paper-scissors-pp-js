@@ -30,28 +30,29 @@ $font-two: 'Bangers', cursive;
 }
 
 .header {
-  margin: 40px 20px 20px 20px;
+  margin: 30px 20px 15px 20px;
   .header__title {
     text-align: center;
     font-family: $font-two;
-    font-size: 3.5em;
+    font-size: 3.2em;
     color: $color-two;
     text-shadow: 6px 6px 1px $color-three;
   }
 }
 
 .game {
-  margin: 20px;
+  margin: 15px;
   text-align: center;
 }
 
 .score {
-  margin: 40px;
+  margin: 15px;
 }
 
+//Hands
 .game__img {
-  width: 145px;
-  height: 145px;
+  width: 135px;
+  height: 135px;
   border-radius: 20%;
   margin: 25px 20px 20px 20px;
   border: none;
@@ -108,9 +109,10 @@ $font-two: 'Bangers', cursive;
   }
 }
 
+//Start button
 .game__btn {
-  width: 220px;
-  height: 75px;
+  width: 180px;
+  height: 55px;
   margin: 15px 20px 40px 20px;
   border-radius: 15%;
   background-color: $color-three;
@@ -118,12 +120,41 @@ $font-two: 'Bangers', cursive;
   box-shadow: 5px 5px 1px $color-two;
   border: none;
   outline: none;
-  font-size: 20px;
+  font-size: 1em;
   &:hover, &:active {
     cursor: pointer;
     background-color: lighten($color-three, 10%);
     color: $color-four;
     box-shadow: 5px 5px 1px $color-four;
+  }
+}
+
+//Game title
+.game__title {
+  font-size: 1.5em;
+  //font-size: 36px;
+  color: $color-two;
+  text-shadow: 2px 2px 1px $color-three;
+  margin: 0;
+}
+
+//Score
+.score__table {
+  margin: 0 auto;
+  //margin: 20px; //?
+  font-size: 20px;
+  background-color: $color-three;
+  color: $color-seven;
+  border-collapse: collapse;
+
+  border-radius:5%;
+  overflow: hidden;
+  .score__cell {
+    //border: none;
+    border: 1.5px solid #273c75;
+    text-align: center;
+    width: 150px;
+    height: 30px;
   }
 }
 
@@ -167,18 +198,6 @@ $font-two: 'Bangers', cursive;
   padding: 5px 10px;
 }
 
-//
-.score__table {
-  margin: 0 auto;
-  border-collapse: collapse;
-}
-
-.score__cell {
-  width: 150px;
-  height: 30px;
-  border: 1.5px solid #273c75;
-  text-align: center;
-}
 
 
 
