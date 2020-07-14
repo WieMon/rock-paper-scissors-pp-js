@@ -41,7 +41,7 @@ function closeModal() {
 
 //Function to print the start message
 function startMessage() {
-  gameStartTitle.innerHTML = `${gameSummary.playerName} you will play ${gameSummary.roundNumber - gameSummary.rounds} rounds.<br /> Please choose your move:`
+  gameStartTitle.innerHTML = `Your rounds to play: ${gameSummary.roundNumber - gameSummary.rounds} <br /> ${gameSummary.playerName} please choose your move: `;
 }
 
 //Function for adding the content of modal
