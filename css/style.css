@@ -27,7 +27,7 @@
 .header .header__title {
   text-align: center;
   font-family: "Bangers", cursive;
-  font-size: 3em;
+  font-size: 3.5em;
   color: #FFC312;
   text-shadow: 6px 6px 1px #032b4d;
 }
@@ -48,10 +48,12 @@
   margin: 20px;
   border: none;
   outline: none;
+  opacity: 0.5;
 }
 
 .game__img:hover {
   cursor: pointer;
+  opacity: 1;
 }
 
 .game__img .fas {
@@ -107,6 +109,26 @@
 
 .game__scissors .fa-hand-scissors {
   color: #1998f7;
+}
+
+.game__btn {
+  width: 220px;
+  height: 75px;
+  margin: 20px;
+  border-radius: 15%;
+  background-color: #032b4d;
+  color: #FFC312;
+  box-shadow: 5px 5px 1px #FFC312;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+
+.game__btn:hover, .game__btn:active {
+  cursor: pointer;
+  background-color: #05467e;
+  color: #eb2f06;
+  box-shadow: 5px 5px 1px #eb2f06;
 }
 
 /*Modal*/
