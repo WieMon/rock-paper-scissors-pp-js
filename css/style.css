@@ -133,8 +133,7 @@
 
 .game__title {
   font-size: 1.5em;
-  color: #FFC312;
-  text-shadow: 2px 2px 1px #032b4d;
+  color: #032b4d;
   margin: 0;
 }
 
@@ -142,7 +141,7 @@
   font-size: 20px;
   background-color: #043966;
   border-collapse: collapse;
-  box-shadow: 3px 3px 3px #FFC312;
+  box-shadow: 5px 5px 3px #FFC312;
   border-radius: 5%;
   overflow: hidden;
 }
@@ -150,18 +149,27 @@
 .score__table .score__cell {
   text-align: center;
   color: #FFC312;
-  width: 550px;
+  width: 570px;
   height: 40px;
-  padding: 8px 15px;
+  padding: 20px 15px;
 }
 
 .score__table .score__message {
   font-size: 26px;
+  text-shadow: 6px 6px 1px #032b4d;
+  padding-bottom: 5px;
 }
 
 .score__table .score__total {
   font-size: 36px;
   font-size: bold;
+  box-shadow: 6px 6px 1px #032b4d;
+  background-color: #05467e;
+}
+
+.score__table .active {
+  letter-spacing: 4px;
+  font-family: "Bangers", cursive;
 }
 
 /*Modal*/

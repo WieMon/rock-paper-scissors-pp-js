@@ -59,6 +59,7 @@ function initGame() {
   addContentModal();
   playerScoreTotalSpan.textContent = 0;
   computerScoreTotalSpan.textContent = 0;
+  choiceSpan.textContent = '';
 }
 
 //Function for the player choice
@@ -92,8 +93,7 @@ function checkResult(player, computer) {
 //Function for showing the game results
 function publishResult(player, computer, result) {
   ++gameSummary.rounds;
-  choiceSpan.textContent = `You played ${player.toUpperCase()} and I played ${computer.toUpperCase()}`;
-  //computerChoiceSpan.textContent = `I played ${computer}`;
+  choiceSpan.textContent = `You played ${player.toUpperCase()}  &  I played ${computer.toUpperCase()}`;
   gameSummary.roundNumber - gameSummary.rounds
   if (result === 'win') {
     playerScoreTotalSpan.textContent = ++gameSummary.playerPoints;
@@ -114,33 +114,33 @@ function publishTotalMessage() {
   if (gameSummary.playerPoints > gameSummary.computerPoints) {
     clearResults();
     const addLetter = () => {
-      //scoreMessageSpan.textContent += winMessage[index];
-     choiceSpan.textContent += winMessage[index];
+      choiceSpan.classList.add('active');
+      choiceSpan.textContent += winMessage[index].toUpperCase();
       index++;
       if (index === winMessage.length) clearInterval(indexTyping);
     }
     addLetter();
-    const indexTyping = setInterval(addLetter, 40);
+    const indexTyping = setInterval(addLetter, 50);
   } else if (gameSummary.playerPoints < gameSummary.computerPoints) {
     clearResults();
     const addLetter = () => {
-      //scoreMessageSpan.textContent += lostMessage[index];
-      choiceSpan.textContent += lostMessage[index];
+      choiceSpan.classList.add('active');
+      choiceSpan.textContent += lostMessage[index].toUpperCase();
       index++;
       if (index === lostMessage.length) clearInterval(indexTyping);
     }
     addLetter();
-    const indexTyping = setInterval(addLetter, 40);
+    const indexTyping = setInterval(addLetter, 50);
   } else {
     clearResults();
     const addLetter = () => {
-      //scoreMessageSpan.textContent += drawMessage[index];
-      choiceSpan.textContent += drawMessage[index];
+      choiceSpan.classList.add('active');
+      choiceSpan.textContent += drawMessage[index].toUpperCase();
       index++;
       if (index === drawMessage.length) clearInterval(indexTyping);
     }
     addLetter();
-    const indexTyping = setInterval(addLetter, 40);
+    const indexTyping = setInterval(addLetter, 50);
   }
 }
 
@@ -155,7 +155,6 @@ function clearResults() {
   gameSummary.playerPoints = 0;
   gameSummary.computerPoints = 0;
   choiceSpan.textContent = '';
-  //computerChoiceSpan.textContent = '';
 }
 
 //Main function
