@@ -7,11 +7,9 @@ const modalCloseBtn = document.querySelector('.modal__btn-close');
 const gameStartTitle = document.querySelector('.game__title');
 const playerNameInput = document.querySelector('.modal__input-name');
 const roundNumberInput = document.querySelector('.modal__input-rounds');
-const playerChoiceSpan = document.querySelector('[data-summary="your-choice"]');
-const computerChoiceSpan = document.querySelector('[data-summary="computer-choice"]');
+const choiceSpan = document.querySelector('[data-summary="score__message"]');
 const playerScoreTotalSpan = document.querySelector('[data-summary="your-score-total"]');
 const computerScoreTotalSpan = document.querySelector('[data-summary="computer-score-total"]');
-const scoreMessageSpan = document.querySelector('[data-summary="score-message"]');
 
 const game = {
   playerChoice: '',
@@ -41,7 +39,7 @@ function closeModal() {
 
 //Function to print the start message
 function startMessage() {
-  gameStartTitle.innerHTML = `Your rounds to play: ${gameSummary.roundNumber - gameSummary.rounds} <br /> ${gameSummary.playerName} please choose your move: `;
+  gameStartTitle.innerHTML = `Rounds to play: ${gameSummary.roundNumber - gameSummary.rounds} <br /> ${gameSummary.playerName} please choose your move: `;
 }
 
 //Function for adding the content of modal
@@ -59,7 +57,6 @@ function addContentModal() {
 function initGame() {
   closeModal();
   addContentModal();
-  scoreMessageSpan.textContent = '';
   playerScoreTotalSpan.textContent = 0;
   computerScoreTotalSpan.textContent = 0;
 }
@@ -95,8 +92,8 @@ function checkResult(player, computer) {
 //Function for showing the game results
 function publishResult(player, computer, result) {
   ++gameSummary.rounds;
-  playerChoiceSpan.textContent = player;
-  computerChoiceSpan.textContent = computer;
+  choiceSpan.textContent = `You played ${player.toUpperCase()} and I played ${computer.toUpperCase()}`;
+  //computerChoiceSpan.textContent = `I played ${computer}`;
   gameSummary.roundNumber - gameSummary.rounds
   if (result === 'win') {
     playerScoreTotalSpan.textContent = ++gameSummary.playerPoints;
@@ -117,7 +114,8 @@ function publishTotalMessage() {
   if (gameSummary.playerPoints > gameSummary.computerPoints) {
     clearResults();
     const addLetter = () => {
-      scoreMessageSpan.textContent += winMessage[index];
+      //scoreMessageSpan.textContent += winMessage[index];
+     choiceSpan.textContent += winMessage[index];
       index++;
       if (index === winMessage.length) clearInterval(indexTyping);
     }
@@ -126,7 +124,8 @@ function publishTotalMessage() {
   } else if (gameSummary.playerPoints < gameSummary.computerPoints) {
     clearResults();
     const addLetter = () => {
-      scoreMessageSpan.textContent += lostMessage[index];
+      //scoreMessageSpan.textContent += lostMessage[index];
+      choiceSpan.textContent += lostMessage[index];
       index++;
       if (index === lostMessage.length) clearInterval(indexTyping);
     }
@@ -135,7 +134,8 @@ function publishTotalMessage() {
   } else {
     clearResults();
     const addLetter = () => {
-      scoreMessageSpan.textContent += drawMessage[index];
+      //scoreMessageSpan.textContent += drawMessage[index];
+      choiceSpan.textContent += drawMessage[index];
       index++;
       if (index === drawMessage.length) clearInterval(indexTyping);
     }
@@ -154,9 +154,8 @@ function clearResults() {
   gameSummary.rounds = 0;
   gameSummary.playerPoints = 0;
   gameSummary.computerPoints = 0;
-  playerChoiceSpan.textContent = '';
-  computerChoiceSpan.textContent = '';
-  gameSummary.roundNumber = ''
+  choiceSpan.textContent = '';
+  //computerChoiceSpan.textContent = '';
 }
 
 //Main function

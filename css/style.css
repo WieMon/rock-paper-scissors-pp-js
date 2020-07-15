@@ -114,7 +114,7 @@
 .game__btn {
   width: 180px;
   height: 55px;
-  margin: 15px 20px 40px 20px;
+  margin: 15px 20px 30px 20px;
   border-radius: 15%;
   background-color: #032b4d;
   color: #FFC312;
@@ -139,20 +139,29 @@
 }
 
 .score__table {
-  margin: 0 auto;
   font-size: 20px;
-  background-color: #032b4d;
-  color: #FFFFFF;
+  background-color: #043966;
   border-collapse: collapse;
+  box-shadow: 3px 3px 3px #FFC312;
   border-radius: 5%;
   overflow: hidden;
 }
 
 .score__table .score__cell {
-  border: 1.5px solid #273c75;
   text-align: center;
-  width: 150px;
-  height: 30px;
+  color: #FFC312;
+  width: 550px;
+  height: 40px;
+  padding: 8px 15px;
+}
+
+.score__table .score__message {
+  font-size: 26px;
+}
+
+.score__table .score__total {
+  font-size: 36px;
+  font-size: bold;
 }
 
 /*Modal*/

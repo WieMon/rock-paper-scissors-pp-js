@@ -113,7 +113,7 @@ $font-two: 'Bangers', cursive;
 .game__btn {
   width: 180px;
   height: 55px;
-  margin: 15px 20px 40px 20px;
+  margin: 15px 20px 30px 20px;
   border-radius: 15%;
   background-color: $color-three;
   color: $color-two;
@@ -140,21 +140,31 @@ $font-two: 'Bangers', cursive;
 
 //Score
 .score__table {
-  margin: 0 auto;
+  //margin: 0 auto;
   //margin: 20px; //?
   font-size: 20px;
-  background-color: $color-three;
-  color: $color-seven;
+  //background-color: #0c406b;
+  background-color: lighten($color-three, 5%);
   border-collapse: collapse;
-
-  border-radius:5%;
+  box-shadow: 3px 3px 3px $color-two;
+  border-radius: 5%;
   overflow: hidden;
+
   .score__cell {
     //border: none;
-    border: 1.5px solid #273c75;
+    //border: 1.5px solid #273c75;
     text-align: center;
-    width: 150px;
-    height: 30px;
+    color: $color-two;
+    width: 550px;
+    height: 40px;
+    padding: 8px 15px;
+  }
+  .score__message {
+    font-size: 26px;
+  }
+  .score__total {
+    font-size: 36px;
+    font-size: bold;
   }
 }
 
