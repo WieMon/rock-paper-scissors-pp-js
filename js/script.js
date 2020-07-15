@@ -148,6 +148,7 @@ function publishTotalMessage() {
 function endGame() {
   game.playerChoice = '';
   game.computerChoice = '';
+  choiceSpan.classList.remove('active');
 }
 
 function clearResults() {
