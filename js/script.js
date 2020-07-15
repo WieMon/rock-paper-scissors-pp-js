@@ -39,7 +39,13 @@ function closeModal() {
 
 //Function to print the start message
 function startMessage() {
-  gameStartTitle.innerHTML = `Rounds to play: ${gameSummary.roundNumber - gameSummary.rounds} <br /> ${gameSummary.playerName} please choose your move: `;
+  let mq = window.matchMedia('(max-width: 767px)');
+  if(mq.matches) {
+    gameStartTitle.innerHTML = `Rounds to play: ${gameSummary.roundNumber - gameSummary.rounds} <br /> ${gameSummary.playerName} <br /> choose your move: `;
+  } else {
+    gameStartTitle.innerHTML = `Rounds to play: ${gameSummary.roundNumber - gameSummary.rounds} <br /> ${gameSummary.playerName} choose your move: `;
+  }
+
 }
 
 //Function for adding the content of modal

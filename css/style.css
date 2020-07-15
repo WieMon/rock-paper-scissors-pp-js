@@ -208,6 +208,17 @@
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  .modal.show {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+}
+
 .modal__input {
   margin: 5px;
   padding: 5px;

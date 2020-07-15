@@ -195,11 +195,17 @@ $font-two: 'Bangers', cursive;
   padding: 20px;
   border-radius: 5%;
   background-color: $color-seven;
+
 }
 
 .modal.show {
   display: block;
   text-align: center;
+  @media(max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .modal__input {
