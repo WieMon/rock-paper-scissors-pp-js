@@ -1,12 +1,10 @@
-/*Check it*/
-@import url("https://fonts.googleapis.com/css?family=Damion|Open+Sans&display=swap&subset=latin-ext");
 *, *::before, *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/*Variable*/
+/*Variables*/
 .page {
   display: -ms-flexbox;
   display: flex;
@@ -24,7 +22,7 @@
   margin: 30px 20px 15px 20px;
 }
 
-.header .header__title {
+.header__title {
   text-align: center;
   font-family: "Bangers", cursive;
   font-size: 3.2em;
@@ -34,10 +32,6 @@
 
 .game {
   text-align: center;
-  margin: 15px;
-}
-
-.score {
   margin: 15px;
 }
 
@@ -137,6 +131,10 @@
   color: #032b4d;
 }
 
+.score {
+  margin: 15px;
+}
+
 .score__table {
   overflow: hidden;
   border-collapse: collapse;
@@ -147,21 +145,26 @@
   border-radius: 5%;
 }
 
-.score__table .score__cell {
+.score__cell {
   width: 570px;
   padding: 20px 15px;
   text-align: center;
   color: #FFC312;
 }
 
-.score__table .score__message {
+.score__message {
   font-size: 26px;
   text-shadow: 6px 6px 1px #032b4d;
   padding-bottom: 5px;
   height: 65px;
 }
 
-.score__table .score__total {
+.score__message.active {
+  letter-spacing: 4px;
+  font-family: "Bangers", cursive;
+}
+
+.score__total {
   height: 40px;
   font-size: 36px;
   font-size: bold;
@@ -169,12 +172,6 @@
   background-color: #05467e;
 }
 
-.score__table .active {
-  letter-spacing: 4px;
-  font-family: "Bangers", cursive;
-}
-
-/*Modal*/
 .overlay {
   display: none;
   position: fixed;

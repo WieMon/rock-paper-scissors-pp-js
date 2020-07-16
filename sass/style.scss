@@ -1,13 +1,11 @@
-/*Check it*/
-@import url("https://fonts.googleapis.com/css?family=Damion|Open+Sans&display=swap&subset=latin-ext");
-
+//Global
 *, *::before, *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/*Variable*/
+/*Variables*/
 $color-one: #40739e;
 $color-two: #FFC312;
 $color-three: #032b4d;
@@ -18,7 +16,7 @@ $color-seven:#FFFFFF;
 $font-one: 'Open Sans', sans-serif;
 $font-two: 'Bangers', cursive;
 
-//General
+//Page
 .page {
   display: flex;
   flex-wrap: wrap;
@@ -28,27 +26,26 @@ $font-two: 'Bangers', cursive;
   background-color: $color-one;
 }
 
+//Header section
 .header {
   margin: 30px 20px 15px 20px;
-  .header__title {
-    text-align: center;
-    font-family: $font-two;
-    font-size: 3.2em;
-    color: $color-two;
-    text-shadow: 6px 6px 1px $color-three;
-  }
 }
 
+.header__title {
+  text-align: center;
+  font-family: $font-two;
+  font-size: 3.2em;
+  color: $color-two;
+  text-shadow: 6px 6px 1px $color-three;
+}
+
+//Game section
 .game {
   text-align: center;
   margin: 15px;
 }
 
-.score {
-  margin: 15px;
-}
-
-//Hands
+//Game section - hands
 .game__img {
   margin: 25px 20px 20px 20px;
   width: 135px;
@@ -108,7 +105,7 @@ $font-two: 'Bangers', cursive;
   }
 }
 
-//Start button
+//Game section - start button
 .game__btn {
   margin: 5px 20px 30px 20px;
   width: 180px;
@@ -128,14 +125,18 @@ $font-two: 'Bangers', cursive;
   }
 }
 
-//Game title
+//Game section - title
 .game__title {
   margin: 0;
   font-size: 1.5em;
   color: $color-three;
 }
 
-//Score
+//Score section
+.score {
+  margin: 15px;
+}
+
 .score__table {
   overflow: hidden;
   border-collapse: collapse;
@@ -144,32 +145,36 @@ $font-two: 'Bangers', cursive;
   background-color: lighten($color-three, 5%);
   box-shadow: 6px 6px 1px $color-three;
   border-radius: 5%;
-  .score__cell {
-    width: 570px;
-    padding: 20px 15px;
-    text-align: center;
-    color: $color-two;
-  }
-  .score__message {
-    font-size: 26px;
-    text-shadow: 6px 6px 1px $color-three;
-    padding-bottom: 5px;
-    height: 65px;
-  }
-  .score__total {
-     height: 40px;
-    font-size: 36px;
-    font-size: bold;
-    box-shadow: 6px 6px 1px $color-three;
-    background-color: lighten($color-three, 10%);
-  }
-  .active {
-    letter-spacing: 4px;
-    font-family: $font-two;
-  }
 }
 
-/*Modal*/
+.score__cell {
+  width: 570px;
+  padding: 20px 15px;
+  text-align: center;
+  color: $color-two;
+}
+
+.score__message {
+  font-size: 26px;
+  text-shadow: 6px 6px 1px $color-three;
+  padding-bottom: 5px;
+  height: 65px;
+
+}
+.score__message.active {
+  letter-spacing: 4px;
+  font-family: $font-two;
+}
+
+.score__total {
+  height: 40px;
+  font-size: 36px;
+  font-size: bold;
+  box-shadow: 6px 6px 1px $color-three;
+  background-color: lighten($color-three, 10%);
+}
+
+//Overlay
 .overlay {
   display: none;
   position: fixed;
@@ -184,9 +189,10 @@ $font-two: 'Bangers', cursive;
 }
 
  .overlay.show {
-  display: flex;
+    display: flex;
 }
 
+//Modal
 .modal {
   display: none;
   position: relative;
@@ -195,7 +201,6 @@ $font-two: 'Bangers', cursive;
   padding: 20px;
   border-radius: 5%;
   background-color: $color-seven;
-
 }
 
 .modal.show {
