@@ -140,8 +140,6 @@
   border-collapse: collapse;
   border-radius: 5%;
   font-size: 20px;
-  background-color: #043966;
-  box-shadow: 6px 6px 1px #032b4d;
   border-radius: 5%;
 }
 
@@ -154,7 +152,7 @@
 
 .score__message {
   font-size: 26px;
-  text-shadow: 6px 6px 1px #032b4d;
+  text-shadow: 5px 5px 1px #032b4d;
   padding-bottom: 5px;
   height: 65px;
 }
@@ -166,10 +164,11 @@
 
 .score__total {
   height: 40px;
-  font-size: 36px;
+  padding: 10px;
+  font-size: 40px;
   font-size: bold;
-  box-shadow: 6px 6px 1px #032b4d;
-  background-color: #05467e;
+  box-shadow: 5px 5px 1px #032b4d;
+  background-color: #043966;
 }
 
 .overlay {

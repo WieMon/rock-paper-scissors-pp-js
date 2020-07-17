@@ -142,8 +142,6 @@ $font-two: 'Bangers', cursive;
   border-collapse: collapse;
   border-radius: 5%;
   font-size: 20px;
-  background-color: lighten($color-three, 5%);
-  box-shadow: 6px 6px 1px $color-three;
   border-radius: 5%;
 }
 
@@ -156,7 +154,7 @@ $font-two: 'Bangers', cursive;
 
 .score__message {
   font-size: 26px;
-  text-shadow: 6px 6px 1px $color-three;
+  text-shadow: 5px 5px 1px $color-three;
   padding-bottom: 5px;
   height: 65px;
 
@@ -168,10 +166,11 @@ $font-two: 'Bangers', cursive;
 
 .score__total {
   height: 40px;
-  font-size: 36px;
+  padding: 10px;
+  font-size: 40px;
   font-size: bold;
-  box-shadow: 6px 6px 1px $color-three;
-  background-color: lighten($color-three, 10%);
+  box-shadow: 5px 5px 1px $color-three;
+  background-color: lighten($color-three, 5%);
 }
 
 //Overlay
