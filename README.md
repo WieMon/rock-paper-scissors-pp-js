@@ -3,7 +3,7 @@
 ## Description:
 This game was built in vanilla JavaScript following the procedural programming paradigm. Player is asked to enter a name and choose up to 10 rounds.
 
-[DEMO]()
+[DEMO](https://wiemon.github.io/rock-paper-scissors-pp-js/)
 
 ## Technologies:
 - JavaScript
