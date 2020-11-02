@@ -11,6 +11,7 @@ This game was built in vanilla JavaScript following the procedural programming p
 - Sass/SCSS: BEM
 - Node.js: 10.17.0
 - npm: 6.13.1
+- Git: 2.24.0
 - EditorConfig: 0.15.1
 - autoprefixer-cli: 1.0.0
 - browser-sync: 2.26.13
@@ -24,7 +25,7 @@ This game was built in vanilla JavaScript following the procedural programming p
 - stylelint: 11.1.1
 - stylelint-scss: 3.18.0
 - font awesome: 5.9.0
-- fonts google: open sans & bangers
+- google fonts: open sans & bangers
 
 ## To run this project use the command:
 `npm run watch`
