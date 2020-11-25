@@ -27,5 +27,5 @@ This game was built in vanilla JavaScript following the procedural programming p
 - font awesome: 5.9.0
 - google fonts: open sans & bangers
 
-## To run this project use the command:
+## To run this project in the development mode:
 `npm run watch`
